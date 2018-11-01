@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+    - name: Upgrade all installed packages for RHEL Webservers
+      yum:
+        name: "*"
+        state: latest              
